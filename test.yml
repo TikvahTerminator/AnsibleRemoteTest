@@ -1,5 +1,3 @@
-#Test playbook to demonstrate remote git fetching
-
 - name: Test Script
   hosts: "{{ variable_host | default('all') }}"
   remote_user: "{{ log_in_as | default('ansible')"
