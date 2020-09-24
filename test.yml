@@ -1,6 +1,5 @@
 - name: Test Script
-  hosts: "{{ variable_host | default('all') }}"
-  remote_user: "{{ log_in_as | default('ansible')"
+  hosts: all
   tasks:
   - name: Test Command
     command:
