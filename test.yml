@@ -1,0 +1,13 @@
+#Test playbook to demonstrate remote git fetching
+
+- name: Test Script
+  hosts: "{{ variable_host | default('all') }}"
+  remote_user: "{{ log_in_as | default('ansible')"
+  tasks:
+  - name: Test Command
+    command:
+      cmd: echo "This is a test of AWX!" >> ~/test.txt
+  
+  - name: Output
+    debug:
+      msg: "Hello There from Worker 1!"
